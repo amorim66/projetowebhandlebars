@@ -3,13 +3,13 @@
 
 <head>
     <title>{{title}}</title>
-
+</head>
 <body>
     <div class="container">
         <p class="fs-3 mt-4">Consultar - Agendamento de Potenciais Clientes</p>
         <p class="fs-6">Sistema utilizado para agendamento de serviços.</p>
         <div class="table-responsive mt-4">
-            <table class="table align-middle table-sm">
+            <table class="table align-middle table-sm table-striped">
             <thead class="table-primary text-center">
                 <tr>
                     <th>Nome</th>
@@ -17,10 +17,26 @@
                     <th>Origem</th>
                     <th>Data de contato</th>
                     <th>Observação</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
-               
+                {{#each agendamentos}}
+                <tr>
+                    <td class="text-center">{{nome}}</td>
+                    <td class="text-center">{{telefone}}</td>
+                    <td class="text-center">{{origem}}</td>
+                    <td class="text-center">{{data_contato}}</td>
+                    <td class="text-center">{{observacao}}</td>
+                    <td class="text-center">
+                        <!-- Botões de atualizar e excluir -->
+                        <a href="/usuario/editar/{{id}}"><button class="btn btn-primary mx-2">Atualizar</button></a>
+
+                        <a href="/usuario/{{id}}"><button class="btn btn-danger">Excluir</button></a>
+
+                    </td>
+                </tr>
+                {{/each}}
             </tbody>
         </table>
         </div>

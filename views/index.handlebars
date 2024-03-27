@@ -5,37 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{cadastro}}</title>
+    
 </head>
 
 <body>
     <div class="container">
         <p class="fs-3 mt-4">Cadastrar - Agendamento de Potenciais Clientes</p>
         <p class="fs-6">Sistema utilizado para agendamento de serviços.</p>
-        <form action="/usuarios" method="post">
+        <form action="/cadastrar" method="post">
             <div class="form-group mb-3">
                 <label for="nome">Nome: </label>
                 <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome">
             </div>
             <div class="form-group mb-3">
                 <label for="telefone">Telefone: </label>
-                <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Digite seu endereço">
+                <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Digite seu telefone">
             </div>
             <div class="form-group mb-3">
                 <label for="origem">Origem: </label>
-                <select class="form-select" aria-label="Default select example">
+                <select name="origem" class="form-select" aria-label="Default select example">
                     <option selected>Celular</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
+                    <option value="1">Whatsapp</option>
+                    <option value="2">Telefone</option>
                     <option value="3">Three</option>
                 </select>
             </div>
             <div class="form-group mb-3">
                 <label for="data">Data do Contato: </label>
-                <input id="data" class="form-control" type="date" />
+                <input id="data" class="form-control" type="date" name="data_contato" />
             </div>
             <div class="form-group mb-3">
                 <label for="observacoes">Observação: </label>
-                <textarea class="form-control" id="observacoes" name="observacoes" rows="3"
+                <textarea class="form-control" id="observacoes" name="observacao" rows="3"
                     placeholder="Digite suas observações"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>

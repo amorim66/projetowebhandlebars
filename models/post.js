@@ -1,6 +1,13 @@
 const db = require('./banco');
+const { DataTypes } = require('sequelize');
 
-const Agendamentos = db.sequelize.define("agendamentos",{
+const Agendamentos = db.sequelize.define("agendamentos", {
+    id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        primaryKey: true,
+        autoIncrement: true,
+        allowNull: false,
+    },
     nome: {
         type: db.Sequelize.STRING
     },

@@ -88,6 +88,7 @@ app.post('/posts/:id', async (req, res) => {
     }
 });
 
+
 app.get("/excluir/:id", function(req, res){
     Post.destroy({where: {"id": req.params.id}}).then(function(){
         console.log("Agendamento excluído com sucesso!");
